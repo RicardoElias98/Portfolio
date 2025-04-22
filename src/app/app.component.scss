@@ -1,9 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Tourney:wght@700&display=swap');
+
+
 .logo-avatar-wrapper {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     gap: 10px;
+}
+
+.avatar-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.info-wrappper {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar-wrapper {
@@ -19,15 +37,18 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    -webkit-user-drag: none;
   }
 
 .logos-ticker {
-  padding-block: 8px;
-  border-block: 1px solid;
+  padding-block: 4px;
+  //border-block: 1px solid;
   overflow: hidden;
   display: inline-flex;
   -webkit-mask-image: linear-gradient(90deg, transparent, #fff 10%, #fff  90%, transparent);  
   background-color: antiquewhite;
+  width: 70%;
+  margin-top: 10px;
 
   &:hover .ul {
     animation-play-state: paused;
@@ -40,7 +61,7 @@
     background-color: transparent;
     flex-shrink: 0;
     min-width: 100%;
-    animation: scroll 5s linear infinite;;
+    animation: scroll 10s linear infinite;
   }
 
   .logo {
@@ -49,8 +70,47 @@
     object-fit: cover;
     border-radius: 10px;
     -webkit-user-drag: none;
-    border: 5px solid black;
+    padding: 2px;
+
 }
+}
+
+.special-font {
+  font-family: 'Tourney', sans-serif;
+  font-size: 1.5rem;
+  user-select: none;
+}
+
+.special-font1 {
+  font-family: 'Tourney', sans-serif;
+  font-size: 1rem;
+  user-select: none;
+}
+
+.typewriter {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap; 
+  border-right: 4px solid;
+  animation: typing 3s steps(30, end) infinite, blink 0.5s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%; /* Adjust based on the text length */
+  }
+}
+
+@keyframes blink {
+  from {
+    border-color: black;
+  }
+  to {
+    border-color: transparent;
+  }
 }
 
 @keyframes scroll {
