@@ -1,19 +1,31 @@
-<div class="logo-avatar-wrapper">
+<div class="logo-avatar-wrapper" [class.hidden]="isHidden">
 <div class="avatar-info-wrapper">
-<div class="avatar-wrapper">
+<div class="avatar-wrapper" [class.hidden]="isHidden">
   <img src="/assets/ProfilePic.png" alt="Avatar" class="avatar" />
 </div>
-<div class="info-wrappper">
+<div class="info-wrappper" [class.hidden]="isHidden">
 <span class="special-font1"> 👋🏽, my name is Ricardo Elias </span>
-<span class="special-font typewriter" > I'm a Software Developer 👨🏽‍💻🚀</span>
+<div class="inline-container">
+  <span class="special-font"> I'm a </span>
+  <span class="special-font typewriter underline">Software Developer 👨🏽‍💻🚀</span>
 </div>
 </div>
+<img   [src]="isHidden ? '/assets/arrowDown.png' : '/assets/arrowUp.png'" 
+alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
+</div>
+</div>
+
+
+
+
+
 <div class="logos-ticker"> 
   <div class="ul">
   <img src="/assets/Angular.png" alt="Angular" class="logo" />
   <img src="/assets/react.png" alt="Angular" class="logo" />
   <img src="/assets/html.png" alt="Angular" class="logo" />
   <img src="/assets/css.png" alt="Angular" class="logo" />
+  <img src="/assets/sass.png" alt="Angular" class="logo" />
   <img src="/assets/JavaScript.png" alt="Angular" class="logo" />
   <img src="/assets/TS.png" alt="Angular" class="logo" />
   <img src="/assets/java.png" alt="Angular" class="logo" />
@@ -24,11 +36,13 @@
   <img src="/assets/react.png" alt="Angular" class="logo" />
   <img src="/assets/html.png" alt="Angular" class="logo" />
   <img src="/assets/css.png" alt="Angular" class="logo" />
+  <img src="/assets/sass.png" alt="Angular" class="logo" />
   <img src="/assets/JavaScript.png" alt="Angular" class="logo" />
   <img src="/assets/TS.png" alt="Angular" class="logo" />
   <img src="/assets/java.png" alt="Angular" class="logo" />
   <img src="/assets/springboot.png" alt="Angular" class="logo" />
 </div>
 </div>
-</div>
+
+
 

@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -10,4 +11,9 @@ import { RouterOutlet } from '@angular/router';
 })
 export class AppComponent {
   title = 'portfolio';
+  isHidden = false
+
+  hideTopInfo() {
+    this.isHidden = !this.isHidden;
+  }
 }
