@@ -1,0 +1,12 @@
+.card-wrapper {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px black, 0 1px 3px black; /* Subtle shadow */
+
+    &:hover {
+        box-shadow: 0 20px 26px black, 0 1px 3px black; /* Subtle shadow */
+        transition: box-shadow 0.3s ease-in-out;
+        transform: scale(1.04);
+        transition: transform 0.3s ease-in-out;
+    }
+} 

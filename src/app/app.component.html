@@ -15,6 +15,25 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 </div>
 </div>
 
+<div class="container-swipper" [class.hidden]="isHidden">
+<div class="swiper">
+<div class="cards-container swiper-wrapper">
+  <div class="card swiper-slide">
+    <video autoplay muted loop class="video-background">
+      <source src="assets/playersProject.mov" type="video/mp4" />
+    </video>
+    <span class="special-font1 players"> Players List 🎮 </span>
+  </div>
+  <div class="card swiper-slide"></div>
+  <div class="card swiper-slide"></div>
+  <div class="card swiper-slide"></div>
+  <div class="card swiper-slide"></div>
+  <div class="card swiper-slide"></div>
+</div>
+<div class="swiper-scrollbar"></div>
+</div>
+</div>
+
 
 
 
@@ -43,6 +62,7 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
   <img src="/assets/springboot.png" alt="Angular" class="logo" />
 </div>
 </div>
+
 
 
 
