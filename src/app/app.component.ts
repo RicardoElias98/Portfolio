@@ -5,11 +5,13 @@ import { CardComponent } from "../components/card/card.component";
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import 'swiper/swiper-bundle.css';
+import {MatTooltipModule} from '@angular/material/tooltip';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardComponent, CommonModule],
+  imports: [RouterOutlet, CardComponent, CommonModule, MatTooltipModule],
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })

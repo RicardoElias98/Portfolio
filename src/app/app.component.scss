@@ -88,13 +88,15 @@
       width: 75px;
       height: 75px;
       opacity: 0.3;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
 
       &:hover {
         cursor: pointer;
         transform: scale(1.1);
-        transition: transform 0.5s ease-in-out;
+        transition: transform 0.3s ease-in-out;
         opacity: 1;
         border: 2px solid #101010;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); 
       }
     }
   }
@@ -117,6 +119,15 @@
   position: fixed;
   bottom: 0;
   z-index: 10;
+  transition: blur 0.3 ease;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s ease, opacity 0.3s ease;
+  }
 
   &:hover .ul {
     animation-play-state: paused;
@@ -162,6 +173,75 @@
     font-size: 1.5rem;
     padding: 10px;
   }
+
+  &.about {
+    font-size: 1.5rem;
+    padding: 10px;
+    text-decoration: underline;
+  }
+}
+
+.aboutMe__description {
+  background: linear-gradient(45deg, grey, black); /* Darker and gray tones */  color: gold; /* Cor do texto */
+  font-size: 1.2rem; /* Tamanho do texto */
+  padding: 25px; /* Espaçamento interno maior */
+  border-radius: 15px; /* Bordas mais arredondadas */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Sombra mais suave e destacada */
+  max-width: 700px; /* Largura máxima maior */
+  margin: 30px auto; /* Centraliza o bloco com mais espaçamento */
+  text-align: center; /* Centraliza o texto */
+  overflow: hidden; /* Esconde conteúdo extra */
+  z-index: 1;
+  position: relative; /* Necessário para elementos ::before e ::after */
+
+  /* Animação de hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px); /* Eleva o bloco ao passar o mouse */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4); /* Sombra mais intensa no hover */
+  }
+
+  /* Efeito decorativo com ::before */
+  &::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: rgba(255, 255, 255, 0.1); /* Círculo decorativo */
+    border-radius: 50%;
+    z-index: -1; /* Fica atrás do conteúdo */
+    animation: float 6s infinite ease-in-out;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    right: -50px;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.05); /* Círculo decorativo */
+    border-radius: 50%;
+    z-index: -1; /* Fica atrás do conteúdo */
+    animation: float 8s infinite ease-in-out;
+  }
+
+
+  /* Animação dos elementos decorativos */
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-10px) translateX(156px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+  }
 }
 
 .typewriter {
@@ -173,13 +253,22 @@
 }
 
 .aboutMe {
-  background-color: salmon;
+  filter: blur(20px);
+  transition: filter 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &.hidden {
+    filter: none;
+  }
 
   &__icons {
-    background-color: antiquewhite;
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     padding: 10px;
   }
 }
@@ -301,6 +390,9 @@
 {
   opacity: 1;
 }
+
+
+
 
 @keyframes typing {
   from {

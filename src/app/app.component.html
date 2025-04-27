@@ -48,16 +48,37 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 </div>
 
 <div class="aboutMe-wrapper">
-<div class="aboutMe">
-  <span class="special-font1"> About Me </span>
+<div class="aboutMe" [class.hidden]="isHidden">
   <div class="aboutMe__icons">
+    <div class="avatar-wrapper about" >
+      <img src="/assets/baby.png"  alt="Avatar" class="avatar" matTooltip="I was born and raised in Coimbra, Portugal 🇵🇹 — a city full of history, culture, and student life 🎓. Growing up there shaped who I am today, giving me strong roots 🌳, a love for learning 📚, and a lot of resilience 💪. Coimbra will always be a big part of my story 🏡."
+      [matTooltipPosition]="'above'" [matTooltipDisabled]="!isHidden"
+      />
+    </div>
+  <div class="line"></div>
   <div class="avatar-wrapper about" >
-    <img src="/assets/coding.png" alt="Avatar" class="avatar" matTooltip="Info about the action"/>
+    <img src="/assets/workout.png"  alt="Avatar" class="avatar" matTooltip="Fueled by my passion for sports 🏋️‍♂️ and health ❤️, I completed a Bachelor's degree in Sports Science 🎓 in 2020 and a Postgraduate degree in High Performance Training 🎯 in 2022. I worked as a physical trainer in handball 🤾‍♂️ and football ⚽, coached athletes individually up to the third division 🏆, taught PE in schools 🏫, and trained clients as a personal trainer 💪. As it didn’t fully meet my expectations, I decided to change direction 🔄."
+    [matTooltipPosition]="'above'"   [matTooltipDisabled]="!isHidden"
+    />
   </div>
   <div class="line"></div>
   <div class="avatar-wrapper about" >
-    <img src="/assets/workout.png" alt="Avatar" class="avatar" />
+    <img src="/assets/coding.png" alt="Avatar" class="avatar" [matTooltipDisabled]="!isHidden"  matTooltip="In 2023, I discovered my passion for programming 💻. I started learning on my own at home 🏡, watching courses and videos online 🎥. Later, I enrolled in an intensive programming course called 'Acertar o Rumo – Programming in Java' at the Department of Informatics Engineering at the University of Coimbra 🎓. There, I learned Java ☕, React ⚛️, CSS 🎨, HTML 🌐, Jakarta EE 🛠️, and developed important soft skills like teamwork 🤝, resilience 💪, adaptability 🔄, and time management ⏳. It was an intense year that completely changed the course of my life 🚀."/>
   </div>
+  <div class="line"></div>
+  <div class="avatar-wrapper about" >
+    <img src="/assets/estagio.png" alt="Avatar" class="avatar" [matTooltipDisabled]="!isHidden"  matTooltip="I started an internship at Critical TechWorks, a company based in Lisbon 🌆, where I'm having my first real experience in a corporate environment 🏢. I've grown a lot, both personally and professionally 📈, working with technologies like Angular 🅰️, TypeScript 📜, Java ☕, Spring Boot 🌱, Cypress 🧪, among others. We work with an agile methodology, following Scrum practices 🧩. It's been an amazing journey where I'm evolving every day, gaining technical skills and becoming a better version of myself 🚀. Here is where I'm today, enjoying the moment ❤️"/>
+  </div>
+</div>
+<span class="special-font1 about"> ABOUT ME </span>
+<div class="aboutMe__description">
+  <span class="">
+    Programming quickly became one of my biggest passions 💻.<br>
+    I’m truly grateful for the day I decided to start this journey 🙏.<br>
+    Every day, I’m obsessed with improving, learning new things 📚,<br>
+    and getting better at what I already know 🚀.<br>
+    It's a path of constant growth and I love every step of it! ❤️
+  </span>
 </div>
 </div>
 
@@ -65,7 +86,7 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 
 
 <!--  FOOTER  -->
-<div class="logos-ticker"> 
+<div class="logos-ticker" [class.hidden]="isHidden"> 
   <div class="ul">
   <img src="/assets/Angular.png" alt="Angular" class="logo" />
   <img src="/assets/react.png" alt="Angular" class="logo" />
