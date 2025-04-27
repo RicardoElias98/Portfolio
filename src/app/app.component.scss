@@ -142,6 +142,11 @@
   &.players {
     font-size: 1.5rem;    
   }
+
+  &.futureProject{
+    font-size: 1.5rem;
+    padding: 10px;
+  }
 }
 
 .typewriter {
@@ -236,6 +241,8 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
+  opacity: 0.3;
 
   &:hover {
     transform: translateY(-5px); /* Slight lift effect on hover */
@@ -253,6 +260,11 @@
   width: 100%;
   height: 85%;
   top: 0;
+}
+
+.card.swiper-slide.swiper-slide-active
+{
+  opacity: 1;
 }
 
 @keyframes typing {
