@@ -82,6 +82,21 @@
     &.hidden {
       opacity: 0;
     }
+
+    &.about {
+      background-color: whitesmoke ;
+      width: 75px;
+      height: 75px;
+      opacity: 0.3;
+
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.1);
+        transition: transform 0.5s ease-in-out;
+        opacity: 1;
+        border: 2px solid #101010;
+      }
+    }
   }
   
   .avatar {
@@ -155,6 +170,25 @@
   white-space: nowrap; 
   border-right: 4px solid;
   animation: typing 3s steps(30, end) infinite, blink 0.5s step-end infinite;
+}
+
+.aboutMe {
+  background-color: salmon;
+
+  &__icons {
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+.line {
+  width: 50px; /* Ajuste o comprimento da linha */
+  height: 2px; /* Espessura da linha */
+  background-color: #333; /* Cor da linha */
+  margin: 0 10px;
 }
 
 .underline {
@@ -243,6 +277,7 @@
   align-items: center;
   justify-content: flex-end;
   opacity: 0.3;
+  transition: opacity 0.5s ease;
 
   &:hover {
     transform: translateY(-5px); /* Slight lift effect on hover */

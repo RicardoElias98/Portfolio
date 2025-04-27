@@ -1,3 +1,4 @@
+<!--  HEADER  -->
 <div class="logo-avatar-wrapper" [class.hidden]="isHidden">
 <div class="avatar-info-wrapper">
 <div class="avatar-wrapper" [class.hidden]="isHidden">
@@ -15,6 +16,7 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 </div>
 </div>
 
+<!--  PROJECTS SLIDERS  -->
 <div class="container-swipper" [class.hidden]="isHidden">
 <div class="swiper">
 <div class="cards-container swiper-wrapper">
@@ -45,10 +47,24 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 </div>
 </div>
 
+<div class="aboutMe-wrapper">
+<div class="aboutMe">
+  <span class="special-font1"> About Me </span>
+  <div class="aboutMe__icons">
+  <div class="avatar-wrapper about" >
+    <img src="/assets/coding.png" alt="Avatar" class="avatar" matTooltip="Info about the action"/>
+  </div>
+  <div class="line"></div>
+  <div class="avatar-wrapper about" >
+    <img src="/assets/workout.png" alt="Avatar" class="avatar" />
+  </div>
+</div>
+</div>
 
 
 
 
+<!--  FOOTER  -->
 <div class="logos-ticker"> 
   <div class="ul">
   <img src="/assets/Angular.png" alt="Angular" class="logo" />

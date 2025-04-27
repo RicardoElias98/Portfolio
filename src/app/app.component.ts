@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { CardComponent } from "../components/card/card.component";
 import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 import 'swiper/swiper-bundle.css';
-
 
 @Component({
   selector: 'app-root',
