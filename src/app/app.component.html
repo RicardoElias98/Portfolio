@@ -1,8 +1,15 @@
 <!--  HEADER  -->
 <div class="logo-avatar-wrapper" [class.hidden]="isHidden">
 <div class="avatar-info-wrapper">
+  <div class="images-container">
 <div class="avatar-wrapper" [class.hidden]="isHidden">
   <img src="/assets/ProfilePic.png" alt="Avatar" class="avatar" />
+</div>
+<div class="avatar-wrapper__linkedin" [class.hidden]="isHidden">
+  <a href="https://www.linkedin.com/in/ricardoelias98/" target="_blank" rel="noopener noreferrer">
+  <img src="/assets/linkedin.png" alt="Avatar" class="avatar" />
+</a>
+</div>
 </div>
 <div class="info-wrappper" [class.hidden]="isHidden">
 <span class="special-font1"> 👋🏽, my name is Ricardo Elias </span>
@@ -44,6 +51,7 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
   </div>
 </div>
 <div class="swiper-scrollbar"></div>
+<span class="special-font1 about"> MY PROJECTS </span>
 </div>
 </div>
 
@@ -63,11 +71,11 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
   </div>
   <div class="line"></div>
   <div class="avatar-wrapper about" >
-    <img src="/assets/coding.png" alt="Avatar" class="avatar" [matTooltipDisabled]="!isHidden"  matTooltip="In 2023, I discovered my passion for programming 💻. I started learning on my own at home 🏡, watching courses and videos online 🎥. Later, I enrolled in an intensive programming course called 'Acertar o Rumo – Programming in Java' at the Department of Informatics Engineering at the University of Coimbra 🎓. There, I learned Java ☕, React ⚛️, CSS 🎨, HTML 🌐, Jakarta EE 🛠️, and developed important soft skills like teamwork 🤝, resilience 💪, adaptability 🔄, and time management ⏳. It was an intense year that completely changed the course of my life 🚀."/>
+    <img src="/assets/coding.png" alt="Avatar" class="avatar" [matTooltipPosition]="'above'" [matTooltipDisabled]="!isHidden"  matTooltip="In 2023, I discovered my passion for programming 💻. I started learning on my own at home 🏡, watching courses and videos online 🎥. Later, I enrolled in an intensive programming course called 'Acertar o Rumo – Programming in Java' at the Department of Informatics Engineering at the University of Coimbra 🎓. There, I learned Java ☕, React ⚛️, CSS 🎨, HTML 🌐, Jakarta EE 🛠️, and developed important soft skills like teamwork 🤝, resilience 💪, adaptability 🔄, and time management ⏳. It was an intense year that changed my life 🚀"/>
   </div>
   <div class="line"></div>
   <div class="avatar-wrapper about" >
-    <img src="/assets/estagio.png" alt="Avatar" class="avatar" [matTooltipDisabled]="!isHidden"  matTooltip="I started an internship at Critical TechWorks, a company based in Lisbon 🌆, where I'm having my first real experience in a corporate environment 🏢. I've grown a lot, both personally and professionally 📈, working with technologies like Angular 🅰️, TypeScript 📜, Java ☕, Spring Boot 🌱, Cypress 🧪, among others. We work with an agile methodology, following Scrum practices 🧩. It's been an amazing journey where I'm evolving every day, gaining technical skills and becoming a better version of myself 🚀. Here is where I'm today, enjoying the moment ❤️"/>
+    <img src="/assets/estagio.png" alt="Avatar" class="avatar" [matTooltipPosition]="'above'" [matTooltipDisabled]="!isHidden"  matTooltip="I started an internship at Critical TechWorks, a company based in Lisbon 🌆, where I'm having my first real experience in a corporate environment 🏢. I've grown a lot, both personally and professionally 📈, working with technologies like Angular 🅰️, TypeScript 📜, Java ☕, Spring Boot 🌱, Cypress 🧪, among others. We work with an agile methodology, following Scrum practices 🧩. It's been an amazing journey where I'm evolving every day, gaining technical skills and becoming a better version of myself 🚀. Here is where I'm today, enjoying the moment ❤️"/>
   </div>
 </div>
 <span class="special-font1 about"> ABOUT ME </span>
