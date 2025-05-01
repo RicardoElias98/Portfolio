@@ -103,7 +103,7 @@
     overflow: hidden;
     border: 2px solid #ccc;
     transition: opacity 0.5s ease;
-
+  
     &.hidden {
       opacity: 0;
     }
@@ -183,31 +183,55 @@
   font-family: 'Tourney', sans-serif;
   font-size: 1.5rem;
   user-select: none;
+  color: #333;
 }
 
 .special-font1 {
   font-family: 'Tourney', sans-serif;
   font-size: 1rem;
   user-select: none;
+  color: #333;
 
   &.players {
-    font-size: 1.5rem;    
+    font-size: 1.5rem; 
+    color: #333;  
+    transition: opacity 0.5s ease;
+
+    &.show1{
+      opacity: 0;
+    }
+
+    &-hidden {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+      padding: 15px;
+      position: absolute;
+
+      &.show1{
+        opacity: 1;
+    }
+  }
+
   }
 
   &.futureProject{
     font-size: 1.5rem;
     padding: 10px;
+    color: #333;
   }
 
   &.about {
     font-size: 1.5rem;
     padding: 10px;
     text-decoration: underline;
+    color: #333;
   }
 }
 
 .aboutMe__description {
-  background: linear-gradient(45deg, grey, black); /* Darker and gray tones */  color: gold; /* Cor do texto */
+  background-color: antiquewhite;
+    color: #333; /* Cor do texto */
   font-size: 1.2rem; /* Tamanho do texto */
   padding: 25px; /* Espaçamento interno maior */
   border-radius: 15px; /* Bordas mais arredondadas */
@@ -235,10 +259,11 @@
     left: -50px;
     width: 150px;
     height: 150px;
-    background: rgba(255, 255, 255, 0.1); /* Círculo decorativo */
+    background:#333;; /* Círculo decorativo */
     border-radius: 50%;
     z-index: -1; /* Fica atrás do conteúdo */
     animation: float 6s infinite ease-in-out;
+    opacity: 0.3;
   }
 
   &::after {
@@ -248,10 +273,11 @@
     right: -50px;
     width: 200px;
     height: 200px;
-    background: rgba(255, 255, 255, 0.05); /* Círculo decorativo */
+    background: #333; /* Círculo decorativo */
     border-radius: 50%;
     z-index: -1; /* Fica atrás do conteúdo */
     animation: float 8s infinite ease-in-out;
+    opacity: 0.3;
   }
 
 
@@ -381,12 +407,12 @@
 }
 
 .card {
-  background-color: whitesmoke;
+  background-color: antiquewhite;
   height: 300px;
   width: 200px;
   border-radius: 10px;
   position: relative; 
-  overflow: hidden;
+  overflow:hidden; /* Esconde o conteúdo que ultrapassa os limites do card */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Subtle shadow */
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
   display: flex;
@@ -399,19 +425,27 @@
   &:hover {
     transform: translateY(-5px); /* Slight lift effect on hover */
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+    cursor: pointer;
 
 
     .video-background {
       //transform: scale(0.8); /* Aumenta o vídeo proporcionalmente */
-      transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+      transition: transform 0.3s ease-in-out, opacity 0.5s ease-in-out;
     }
   }
 }
 
 .video-background{
   width: 100%;
-  height: 85%;
-  top: 0;
+  height: 100%;
+  padding: 5px;
+  object-fit: contain;
+  background-color: transparent;
+  position: absolute;
+
+  &.show1{
+    opacity: 0;  
+  }
 }
 
 .card.swiper-slide.swiper-slide-active
@@ -433,7 +467,7 @@
 
 @keyframes blink {
   from {
-    border-color: black;
+    border-color: #333;
   }
   to {
     border-color: transparent;

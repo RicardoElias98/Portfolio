@@ -27,12 +27,14 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 <div class="container-swipper" [class.hidden]="isHidden">
 <div class="swiper">
 <div class="cards-container swiper-wrapper">
-  <div class="card swiper-slide">
-    <video autoplay muted loop class="video-background">
-      <source src="assets/playersProject.mov" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <span class="special-font1 players"> Players List 🎮 </span>
+  <div class="card swiper-slide" (dblclick)="showCard1Info()">
+    <span class="special-font1 players-hidden" [class.show1]="card1Show">
+      To practice the basics, I built a simple project in 2/3 days, where I used directives, pipes, routes, and other core features.<br>
+      <br> 
+      It was a straightforward app, but I really enjoyed working on it because it helped me put into practice what I had been studying.<br>
+    </span>
+    <img src="assets/players.png" alt="player" class="video-background" [class.show1]="card1Show"/>
+    <span class="special-font1 players" [class.show1]="card1Show"> Players List 🎮 </span>
   </div>
   <div class="card swiper-slide">
     <span class="special-font1 futureProject"> # Future Project </span>
@@ -55,6 +57,7 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 </div>
 </div>
 
+<!--  ABOUT ME  -->
 <div class="aboutMe-wrapper">
 <div class="aboutMe" [class.hidden]="isHidden">
   <div class="aboutMe__icons">

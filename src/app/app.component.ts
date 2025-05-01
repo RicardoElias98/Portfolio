@@ -18,6 +18,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 export class AppComponent {
   title = 'portfolio';
   isHidden = false;
+  card1Show = false;
 
   ngAfterViewInit() {
     new Swiper('.swiper', {
@@ -35,5 +36,9 @@ export class AppComponent {
 
   hideTopInfo() {
     this.isHidden = !this.isHidden;
+  }
+
+  showCard1Info() {
+    this.card1Show = !this.card1Show;
   }
 }
