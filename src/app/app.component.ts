@@ -19,6 +19,7 @@ export class AppComponent {
   title = 'portfolio';
   isHidden = false;
   card1Show = false;
+  card2Show = false;
 
   ngAfterViewInit() {
     new Swiper('.swiper', {
@@ -40,5 +41,9 @@ export class AppComponent {
 
   showCard1Info() {
     this.card1Show = !this.card1Show;
+  }
+
+  showCard2Info() {
+    this.card2Show = !this.card2Show;
   }
 }

@@ -36,8 +36,14 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
     <img src="assets/players.png" alt="player" class="video-background" [class.show1]="card1Show"/>
     <span class="special-font1 players" [class.show1]="card1Show"> Players List 🎮 </span>
   </div>
-  <div class="card swiper-slide">
-    <span class="special-font1 futureProject"> # Future Project </span>
+  <div class="card swiper-slide" (dblclick)="showCard2Info()">
+    <span class="special-font1 players-hidden" [class.show2]="card2Show">
+      This is a website I created to showcase my sister's photography work.<br>
+      <br>
+      The goal was to build a simple and elegant portfolio where she can share her best photos and projects.<br>
+    </span>
+    <img src="assets/photoSite.png" alt="player" class="video-background2" [class.show2]="card2Show"/>
+    <span class="special-font1 players" [class.show2]="card2Show"> Photography 📸 </span>
   </div>
   <div class="card swiper-slide">
     <span class="special-font1 futureProject"> # Future Project </span>
@@ -62,7 +68,7 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
 <div class="aboutMe" [class.hidden]="isHidden">
   <div class="aboutMe__icons">
     <div class="avatar-wrapper about" >
-      <img src="/assets/baby.png"  alt="Avatar" class="avatar" matTooltip="I was born and raised in Coimbra, Portugal 🇵🇹 — a city full of history, culture, and student life 🎓. Growing up there shaped who I am today, giving me strong roots 🌳, a love for learning 📚, and a lot of resilience 💪. Coimbra will always be a big part of my story 🏡."
+      <img src="/assets/baby.png"  alt="Avatar" class="avatar" matTooltip="I was born and raised in Coimbra, Portugal! 🇵🇹 Coimbra will always be a big part of my story 🏡."
       [matTooltipPosition]="'above'" [matTooltipDisabled]="!isHidden"
       />
     </div>
@@ -78,17 +84,19 @@ alt="Avatar" class="arrowUp" (click)="hideTopInfo()" />
   </div>
   <div class="line"></div>
   <div class="avatar-wrapper about" >
-    <img src="/assets/estagio.png" alt="Avatar" class="avatar" [matTooltipPosition]="'above'" [matTooltipDisabled]="!isHidden"  matTooltip="I started an internship at Critical TechWorks, a company based in Lisbon 🌆, where I'm having my first real experience in a corporate environment 🏢. I've grown a lot, both personally and professionally 📈, working with technologies like Angular 🅰️, TypeScript 📜, Java ☕, Spring Boot 🌱, Cypress 🧪, among others. We work with an agile methodology, following Scrum practices 🧩. It's been an amazing journey where I'm evolving every day, gaining technical skills and becoming a better version of myself 🚀. Here is where I'm today, enjoying the moment ❤️"/>
+    <img src="/assets/estagio.png" alt="Avatar" class="avatar" [matTooltipPosition]="'above'" [matTooltipDisabled]="!isHidden"  matTooltip="I did an internship at Critical TechWorks, a company based in Lisbon 🌆, where I had my first real experience in a corporate environment 🏢. I grew a lot, both personally and professionally 📈, working with technologies like Angular 🅰️, TypeScript 📜, Java ☕, Spring Boot 🌱, Cypress 🧪, among others. We worked with an agile methodology, following Scrum practices 🧩. It was an amazing journey where I evolved every day, gained technical skills and became a better version of myself 🚀."/>
+  </div>
+  <div class="line"></div>
+  <div class="avatar-wrapper about" >
+    <img src="/assets/ctw.jpeg" alt="Avatar" class="avatar" [matTooltipPosition]="'above'" [matTooltipDisabled]="!isHidden" matTooltip="I stayed at the company and I keep growing a lot in every aspect, both personally and professionally 🚀. I'm making the most of this opportunity and learning more every day ❤️"/>
   </div>
 </div>
 <span class="special-font1 about"> ABOUT ME </span>
 <div class="aboutMe__description">
   <span class="">
-    Programming quickly became one of my biggest passions 💻.<br>
-    I’m truly grateful for the day I decided to start this journey 🙏.<br>
-    Every day, I’m obsessed with improving, learning new things 📚,<br>
-    and getting better at what I already know 🚀.<br>
-    It's a path of constant growth and I love every step of it! ❤️
+    I love programming and learning new things every day!<br>
+    I'm always trying to get better and have fun along the way 🚀<br>
+    Super happy I started this journey! 😄
   </span>
 </div>
 </div>
